@@ -203,6 +203,9 @@ int pcm_mmap_commit(struct pcm *pcm, unsigned int offset, unsigned int frames);
 int pcm_start(struct pcm *pcm);
 int pcm_stop(struct pcm *pcm);
 
+/* ioctl function for PCM driver */
+int pcm_ioctl(struct pcm *pcm, int request, ...);
+
 /* Interrupt driven API */
 int pcm_wait(struct pcm *pcm, int timeout);
 
